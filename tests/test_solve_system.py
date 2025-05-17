@@ -1,4 +1,4 @@
-import solve_system
+from . import solve_system
 import numpy as np
 
 
