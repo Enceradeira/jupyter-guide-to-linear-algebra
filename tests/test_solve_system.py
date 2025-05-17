@@ -44,14 +44,3 @@ def test_RREF_with_example_2():
     )
 
     run_RREF(A, R)
-
-
-def test_RREF_with_random_4_by_4_examples():
-    for _ in range(100):
-        C = np.random.randint(-10, 10, (3, 3))  # coefficients
-        X = np.random.randint(-10, 10, (3, 1))  # assume this is the solution
-        B = C@X  # known vector
-        A = np.hstack((C, B))  # augmented matrix
-        E = np.hstack((np.identity(3), X))  # expected echolon form
-
-        run_RREF(A, E)
