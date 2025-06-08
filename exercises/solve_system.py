@@ -1,4 +1,4 @@
-from . import laguide as lag
+import laguide as lag
 import numpy as np
 import pdb
 
@@ -98,6 +98,7 @@ def RREF(A):
     S3 = lag.RowAdd(S2, 2, 0, -S2[0, 2])
     return S3
 
+
 def Inverse(A):
     # =============================================================================
     # A is a NumPy array that represents a matrix of dimension n x n.
@@ -112,19 +113,19 @@ def Inverse(A):
     n = A.shape[0]  # n is number of rows and columns in A
 
     I = np.eye(n)
-    
+
     # The augmented matrix is A together with all the columns of I.  RowReduction is
     # carried out simultaneously for all n systems.
-    A_augmented = np.hstack((A,I))
-    R = lag.RowReduction(A_augmented)
-    
-    Inverse = np.zeros((n,n))
-    
-    # Now BackSubstitution is carried out for each column and the result is stored 
+    A_augmented = np.hstack((A, I))
+    R = RowReduction(A_augmented)
+
+    Inverse = np.zeros((n, n))
+
+    # Now BackSubstitution is carried out for each column and the result is stored
     # in the corresponding column of Inverse.
-    A_reduced = R[:,0:n]
-    for i in range(0,n):
-        B_reduced = R[:,n+i:n+i+1]
-        Inverse[:,i:i+1] = lag.BackSubstitution(A_reduced,B_reduced)
-    
-    return(Inverse)
+    A_reduced = R[:, 0:n]
+    for i in range(0, n):
+        B_reduced = R[:, n+i:n+i+1]
+        Inverse[:, i:i+1] = BackSubstitution(A_reduced, B_reduced)
+
+    return (Inverse)
