@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
 import subprocess
+import uuid
+
 
 def open_plt():
-    # Print plot
-    plot_path = '/home/jorg/projects/jj/jupyter-guide-to-linear-algebra/plt.png'
+    plot_path = f"/tmp/{uuid.uuid4().hex}.png"
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
 
     plt.close()
