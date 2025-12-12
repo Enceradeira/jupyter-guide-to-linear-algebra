@@ -18,5 +18,6 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
+    "numpy>=2.3.5",
     "pytest>=9.0.2",
 ]

@@ -1,4 +1,5 @@
 import pytest
+import numpy
 from guide_to_linear_algebra.calculator import add, subtract, multiply, divide
 
 def test_add():
