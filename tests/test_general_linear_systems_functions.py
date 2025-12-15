@@ -1,7 +1,5 @@
-import pytest
 import numpy as np
-from guide_to_linear_algebra.general_linear_systems_functions import nr_free_variables
-from guide_to_linear_algebra.general_linear_systems_functions import find_pivots
+from guide_to_linear_algebra.general_linear_systems_functions import nr_free_variables, find_pivots, has_no_solution
 
 
 def test_find_pivots_example_1():
@@ -60,3 +58,29 @@ def test_nr_free_variables_two_free_variables():
                   [3, -6, -2, 11, -7, 13],
                   [1, - 2, -5, 8, 1, -3]])
     assert nr_free_variables(E) == 2
+
+
+def test_has_no_solution_example_1():
+    E = np.array([
+        [1, -2, 2, 0],
+        [2, 2, 2, 1],
+        [0, -1, -1, -2],
+        [-2, -1, -1, 0]])
+
+    assert has_no_solution(E) == 1
+
+
+def test_has_no_solution_example_2():
+    E = np.array([[-2, 2, -2, 2, 0],
+                  [1, -2, -2, 0, -1],
+                  [1, 0, 2, -2, 1]])
+
+    assert has_no_solution(E) == 0
+
+
+def test_has_no_solution_example_3():
+    E = np.array([[1, -2, 2, 0],
+                  [0, -1, -1, -2],
+                  [-2, -1, -1, 0]])
+
+    assert has_no_solution(E) == 0

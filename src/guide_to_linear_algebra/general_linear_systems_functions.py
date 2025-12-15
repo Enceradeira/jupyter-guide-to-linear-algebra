@@ -8,7 +8,7 @@ def find_pivots(R):
     """
     pivots = []
 
-    for row in R[:, :-1]:  # Exclude the last column (augmented part)
+    for row in R:  # Exclude the last column (augmented part)
         if np.all(row == 0):
             continue  # Skip zero rows
 
@@ -24,8 +24,20 @@ def find_pivots(R):
 
 def nr_free_variables(E):
     # Find the number of columns in R that do not contain a pivot
-    pass
     R = lag.FullRowReduction(E)
     P = find_pivots(R)
 
     return R.shape[1] - len(P) - 1
+
+
+def has_no_solution(E):
+    R = lag.FullRowReduction(E)
+
+    # Return true if the last column is a pivot column in R
+    P = find_pivots(R)
+
+    idx_augmented_column = R.shape[1] - 1
+    if np.any(P == idx_augmented_column):
+        return 1
+    else:
+        return 0
