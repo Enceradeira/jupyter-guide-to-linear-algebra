@@ -32,3 +32,17 @@ rst = np.array([2, 3, 4])
 X = B @ rst
 print("X for r,s,t :", "\n", X, "\n")
 print("P X:", "\n", P @ X, "\n")  # Should be zero vector
+
+# Exercise 2
+# Determine if the following set of vectors is a basis for R^4
+W = np.array([
+    [-1, 2, 0, -1],
+    [0, 1, 0, 0],
+    [1, 2, 1, -1],
+    [2, 4, 0, 1]])
+
+R = lag.FullRowReduction(W)
+print("Reduced form W:", "\n", R)
+
+# W has 4 pivot columns, therefore it descrbies a linearly independent set
+# that spans R^4
