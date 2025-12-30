@@ -41,6 +41,7 @@ uv run python exercises/linear_combinations.py
 
 Standalone Python scripts demonstrating linear algebra concepts: linear combinations, vector spaces, LU factorization, interpolation, graph theory applications. Each file is runnable independently.
 
+
 ### Tests (`tests/`)
 
 Pytest-based tests covering solve_system and general_linear_systems_functions modules.
@@ -51,3 +52,6 @@ Python >= 3.12. Runtime dependencies (numpy, scipy, matplotlib, networkx) are in
 
 ## Commit Guidelines
 - Use commit messages that span a single line, unless told otherwise.
+
+## Instructions for Claude Code
+- Only comment on possible solutions when asked.
