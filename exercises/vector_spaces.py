@@ -1,7 +1,8 @@
+import matplotlib
+matplotlib.use('QtAgg')
 import matplotlib.pyplot as plt
 import numpy as np
 import guide_to_linear_algebra.laguide as lag
-import guide_to_linear_algebra.plt_helper as ph
 
 fig, ax = plt.subplots()
 options = {"head_width": 0.1, "head_length": 0.2, "length_includes_head": True}
@@ -15,7 +16,7 @@ ax.set_ylim(0, 5)
 ax.set_aspect('equal')
 ax.grid(True, ls=':')
 
-# ph.open_plt()
+# plt.show()
 
 # reduced row echelon form
 C = np.random.randint(-2, 3, size=(3, 5))

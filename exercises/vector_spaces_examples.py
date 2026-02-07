@@ -1,6 +1,5 @@
 import numpy as np
 import guide_to_linear_algebra.laguide as lag
-import guide_to_linear_algebra.plt_helper as ph
 
 
 # Example 1: Polynomial Vector Space

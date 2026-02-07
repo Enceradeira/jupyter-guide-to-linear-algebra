@@ -1,7 +1,9 @@
 import numpy as np
 import random
 import guide_to_linear_algebra.laguide as lag
-import guide_to_linear_algebra.plt_helper as ph
+import matplotlib
+matplotlib.use('QtAgg')
+import matplotlib.pyplot as plt
 
 # Exercise 1: Create you own adjacency graph
 J1 = np.array([
@@ -11,7 +13,7 @@ J1 = np.array([
     [0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0]])
 # positions = lag.DrawGraph(J1)
-# ph.open_plt()
+# plt.show()
 
 # Excercise 2
 J2 = np.array([
@@ -22,7 +24,7 @@ J2 = np.array([
     [0, 0, 0, 1, 0]])
 
 # lag.DrawGraph(J2, positions)
-# ph.open_plt()
+# plt.show()
 
 # Exercise 3
 N = 10
@@ -50,7 +52,7 @@ print("C3:\n", C_3)
 lag.HighlightSubgraph(R, big_graph_positions, clique_nodes)
 print("Clique nodes:", clique_nodes)
 
-ph.open_plt()
+plt.show()
 
 
 def find_cliques(C, clique_nodes):

@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import guide_to_linear_algebra.laguide as lag
-import guide_to_linear_algebra.plt_helper as ph
 from guide_to_linear_algebra.general_linear_systems_functions import NrFreeVariables
 
 # Exercise 1

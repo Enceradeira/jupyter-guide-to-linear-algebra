@@ -35,7 +35,6 @@ uv run python exercises/linear_combinations.py
 - **solve_system.py** - System solving: BackSubstitution, RowReduction, SolveSystem, RREF, Inverse
 - **general_linear_systems_functions.py** - Analysis functions: find_pivots, nr_free_variables, has_no_solution
 - **cryptography.py** - Matrix-based encryption using modular arithmetic
-- **plt_helper.py** - Matplotlib helper for saving/displaying plots
 
 ### Exercises (`exercises/`)
 

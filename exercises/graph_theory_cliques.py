@@ -1,7 +1,9 @@
 import numpy as np
 import random
 import guide_to_linear_algebra.laguide as lag
-import guide_to_linear_algebra.plt_helper as ph
+import matplotlib
+matplotlib.use('QtAgg')
+import matplotlib.pyplot as plt
 
 # Finding number of paths of length 3 between nodes in a graph
 B = np.array([[0, 1, 1, 0, 0, 0],
@@ -40,7 +42,7 @@ print("Nodes connected both ways, with number of 3 paths: C@C@C=", "\n", C@C@C)
 
 # node_positions = lag.DrawGraph(A)
 # lag.HighlightSubgraph(A, node_positions, [0, 1, 3])
-# ph.open_plt()
+# plt.show()
 
 # Finding clicques in random graphs
 N = 10
@@ -70,4 +72,4 @@ clique_nodes = select_nodes_having_path_length_3_to_themselves(C_3, N)
 
 print(C_3)
 lag.HighlightSubgraph(R, big_graph_positions, clique_nodes)
-ph.open_plt()
+plt.show()

@@ -1,7 +1,8 @@
 import numpy as np
 from math import pi, sin, cos
+import matplotlib
+matplotlib.use('QtAgg')
 import matplotlib.pyplot as plt
-import guide_to_linear_algebra.plt_helper as ph
 
 coords = np.array([[0, 0], [0.5, 0.5], [0.5, 1.5], [0, 1], [0, 0]])
 coords = coords.transpose()
@@ -36,7 +37,7 @@ A = np.array([
 A_coords = A@coords
 
 plot_coords(A_coords)
-ph.open_plt()
+plt.show()
 
 # Example 2: Reflection
 
@@ -46,7 +47,7 @@ B = np.array([
 
 B_coords = B@coords
 plot_coords(B_coords)
-ph.open_plt()
+plt.show()
 
 
 # Example 3: Rotation
@@ -55,6 +56,6 @@ R = np.array([[cos(theta), -sin(theta)], [sin(theta), cos(theta)]])
 R_coords = R@coords
 
 plot_coords(R_coords)
-ph.open_plt()
+plt.show()
 
 

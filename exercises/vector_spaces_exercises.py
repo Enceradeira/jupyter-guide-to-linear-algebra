@@ -1,6 +1,5 @@
 import numpy as np
 import guide_to_linear_algebra.laguide as lag
-import guide_to_linear_algebra.plt_helper as ph
 
 # Exercise 1:
 # Polynomials: p1 = 3x² + 2x + 1, p2 = 2x² + 5x + 3, p3 = 6x² + 4x + 5

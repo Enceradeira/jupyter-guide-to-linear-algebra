@@ -1,7 +1,8 @@
 import numpy as np
 from math import pi, sin, cos
+import matplotlib
+matplotlib.use('QtAgg')
 import matplotlib.pyplot as plt
-import guide_to_linear_algebra.plt_helper as ph
 
 coords = np.array([[0, 0], [0.5, 0.5], [0.5, 1.5], [0, 1], [0, 0]])
 coords = coords.transpose()
@@ -36,7 +37,7 @@ R = np.array([
 
 R_coords = R@coords
 plot_coords(R_coords, coords)
-ph.open_plt()
+plt.show()
 
 
 # Esercise 2:
@@ -45,7 +46,7 @@ S = np.array([
     [1, 0]])
 S_coords = S@coords
 plot_coords(S_coords, coords)
-ph.open_plt()
+plt.show()
 
 
 # Esercise 3:
@@ -55,7 +56,7 @@ T = np.array([
     [-sin(theta), cos(theta)]])
 T_coords = T@coords
 plot_coords(T_coords, coords)
-ph.open_plt()
+plt.show()
 
 
 # Esercise 4:
@@ -65,7 +66,7 @@ U = np.array([
     [k, 1]])
 U_coords = U@T@coords
 plot_coords(U_coords, coords)
-ph.open_plt()
+plt.show()
 
 
 # Esercise 5: Star of David
@@ -77,7 +78,7 @@ T = np.array([
     [-sin(theta), cos(theta)]])
 T_triangle_coords = T@triangle_coords
 plot_coords(T_triangle_coords, triangle_coords)
-ph.open_plt()
+plt.show()
 
 # Esercise 6
 # Horizontal stretch
@@ -92,4 +93,4 @@ V = np.array([
 
 U_triangle_coords = V@H@triangle_coords
 plot_coords(U_triangle_coords, triangle_coords)
-ph.open_plt()
+plt.show()
