@@ -1,8 +1,8 @@
+import matplotlib.pyplot as plt
 import numpy as np
 from math import pi, sin, cos
 import matplotlib
 matplotlib.use('QtAgg')
-import matplotlib.pyplot as plt
 
 coords = np.array([[0, 0], [0.5, 0.5], [0.5, 1.5], [0, 1], [0, 0]])
 coords = coords.transpose()
